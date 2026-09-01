@@ -3,107 +3,67 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    color-scheme: dark;
+    color-scheme: light;
   }
   
   body {
-    background-color: #030406;
-    color: #f4f4f5;
+    background-color: #f8fafc;
+    color: #0f172a;
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     overflow-x: hidden;
   }
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar for Light Theme */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #030406;
+  background: #f8fafc;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #cbd5e1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #10b981;
+  background: #94a3b8;
 }
 
-/* Futuristic Card Token */
-.futuristic-card {
-  background: rgba(12, 16, 22, 0.8);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 1.75rem;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+/* Minimal Alabaster Light Card */
+.minimal-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.futuristic-card:hover {
-  background: rgba(18, 24, 34, 0.9);
-  border-color: rgba(16, 185, 129, 0.4);
-  box-shadow: 0 20px 40px -15px rgba(16, 185, 129, 0.2), 0 0 30px -5px rgba(16, 185, 129, 0.12);
-  transform: translateY(-4px);
+.minimal-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
+  transform: translateY(-2px);
 }
 
-/* Futuristic Text Gradients (No Blue, No Cyan) */
-.text-gradient-futuristic {
-  background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 50%, #34d399 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-gradient-emerald {
-  background: linear-gradient(135deg, #00ff88 0%, #10b981 50%, #059669 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-gradient-silver {
-  background: linear-gradient(180deg, #ffffff 0%, #94a3b8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Futuristic Grid Lines */
-.bg-futuristic-grid {
+/* Light Background Grid Lines */
+.bg-minimal-grid {
   background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
 }
 
-/* Continuous Marquee Ticker */
-@keyframes marqueeFuturistic {
+/* Marquee Animation */
+@keyframes marqueeMinimal {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-50%); }
 }
 
-.animate-marquee-futuristic {
+.animate-marquee-minimal {
   display: flex;
   width: 200%;
-  animation: marqueeFuturistic 26s linear infinite;
+  animation: marqueeMinimal 28s linear infinite;
 }
 
-.animate-marquee-futuristic:hover {
+.animate-marquee-minimal:hover {
   animation-play-state: paused;
-}
-
-/* Pulse Glow & Floating Animations */
-@keyframes pulseEmerald {
-  0%, 100% { transform: scale(1); opacity: 0.8; }
-  50% { transform: scale(1.03); opacity: 1; }
-}
-
-.animate-pulse-emerald {
-  animation: pulseEmerald 5s ease-in-out infinite;
-}
-
-@keyframes floatFuturistic {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-}
-
-.animate-float-futuristic {
-  animation: floatFuturistic 5s ease-in-out infinite;
 }

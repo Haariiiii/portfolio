@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Send, CheckCircle2, MapPin, Sparkles, AlertCircle } from 'lucide-react';
+import { Mail, Send, CheckCircle2, MapPin, AlertCircle } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../SocialIcons';
 import confetti from 'canvas-confetti';
 import { personalInfo } from '../../data/portfolioData';
@@ -48,26 +48,22 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 relative">
-      
-      {/* Background Glow */}
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-white/5 rounded-full blur-[140px] pointer-events-none"></div>
-
+    <section id="contact" className="py-20 md:py-28 relative bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-mono font-bold mb-3 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-mono font-bold mb-3 uppercase tracking-wider shadow-sm">
             <Mail className="w-3.5 h-3.5" />
             <span>GET IN TOUCH</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-            Contact <span className="text-gradient-editorial">Me</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+            Contact <span className="text-slate-500">Me</span>
           </h2>
-          <p className="text-zinc-400 text-sm max-w-xl mt-3">
+          <p className="text-slate-600 text-sm max-w-xl mt-3">
             Open for Data Analyst, Data Scientist, Machine Learning Engineer, and AI roles. Let's discuss how I can contribute to your team.
           </p>
-          <div className="w-16 h-1 bg-white rounded-full mt-4"></div>
+          <div className="w-12 h-1 bg-slate-900 rounded-full mt-4"></div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -75,22 +71,22 @@ export default function Contact() {
           {/* Direct Contact Cards Column */}
           <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
             <div className="space-y-4">
-              <h3 className="text-2xl font-black text-white mb-2">Let's Connect</h3>
-              <p className="text-zinc-300 text-sm leading-relaxed mb-6 font-normal">
+              <h3 className="text-2xl font-black text-slate-900 mb-2">Let's Connect</h3>
+              <p className="text-slate-600 text-sm leading-relaxed mb-6 font-normal">
                 Whether you have a job opportunity, a project proposal, or technical questions about my ML research, feel free to reach out.
               </p>
 
               {/* Email Card */}
               <a
                 href={personalInfo.social.emailLink}
-                className="editorial-card p-5 flex items-center gap-4 group"
+                className="minimal-card p-5 flex items-center gap-4 group"
               >
-                <div className="p-3.5 rounded-2xl bg-white/10 text-white border border-white/20 group-hover:scale-110 transition-transform">
+                <div className="p-3.5 rounded-2xl bg-slate-100 text-slate-900 border border-slate-200 group-hover:bg-slate-900 group-hover:text-white transition-all">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-xs font-mono text-zinc-400 font-bold">Direct Email</div>
-                  <div className="text-sm font-bold text-white group-hover:text-zinc-300 transition-colors">
+                  <div className="text-xs font-mono text-slate-500 font-bold">Direct Email</div>
+                  <div className="text-sm font-bold text-slate-900">
                     {personalInfo.email}
                   </div>
                 </div>
@@ -101,14 +97,14 @@ export default function Contact() {
                 href={personalInfo.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="editorial-card p-5 flex items-center gap-4 group"
+                className="minimal-card p-5 flex items-center gap-4 group"
               >
-                <div className="p-3.5 rounded-2xl bg-white/10 text-white border border-white/20 group-hover:scale-110 transition-transform">
+                <div className="p-3.5 rounded-2xl bg-slate-100 text-slate-900 border border-slate-200 group-hover:bg-slate-900 group-hover:text-white transition-all">
                   <LinkedinIcon className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-xs font-mono text-zinc-400 font-bold">LinkedIn Profile</div>
-                  <div className="text-sm font-bold text-white group-hover:text-zinc-300 transition-colors">
+                  <div className="text-xs font-mono text-slate-500 font-bold">LinkedIn Profile</div>
+                  <div className="text-sm font-bold text-slate-900">
                     harigovind-p
                   </div>
                 </div>
@@ -119,14 +115,14 @@ export default function Contact() {
                 href={personalInfo.social.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="editorial-card p-5 flex items-center gap-4 group"
+                className="minimal-card p-5 flex items-center gap-4 group"
               >
-                <div className="p-3.5 rounded-2xl bg-white/10 text-white border border-white/20 group-hover:scale-110 transition-transform">
+                <div className="p-3.5 rounded-2xl bg-slate-100 text-slate-900 border border-slate-200 group-hover:bg-slate-900 group-hover:text-white transition-all">
                   <GithubIcon className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-xs font-mono text-zinc-400 font-bold">GitHub Profile</div>
-                  <div className="text-sm font-bold text-white group-hover:text-zinc-300 transition-colors">
+                  <div className="text-xs font-mono text-slate-500 font-bold">GitHub Profile</div>
+                  <div className="text-sm font-bold text-slate-900">
                     github.com/Haariiiii
                   </div>
                 </div>
@@ -134,31 +130,31 @@ export default function Contact() {
             </div>
 
             {/* Location Pill */}
-            <div className="editorial-card p-4 flex items-center gap-3 text-xs font-mono text-zinc-400 font-bold">
-              <MapPin className="w-4 h-4 text-white shrink-0" />
+            <div className="minimal-card p-4 flex items-center gap-3 text-xs font-mono text-slate-600 font-bold">
+              <MapPin className="w-4 h-4 text-slate-900 shrink-0" />
               <span>Based in Kasaragod, Kerala, India • Open to Relocation</span>
             </div>
           </div>
 
           {/* Contact Form Column */}
           <div className="lg:col-span-7">
-            <div className="editorial-card p-8 sm:p-10 shadow-2xl relative">
+            <div className="minimal-card p-8 sm:p-10 shadow-md relative bg-white">
               
-              <h3 className="text-2xl font-black text-white mb-2">Send a Message</h3>
-              <p className="text-zinc-400 text-xs mb-6 font-mono">
+              <h3 className="text-2xl font-black text-slate-900 mb-2">Send a Message</h3>
+              <p className="text-slate-500 text-xs mb-6 font-mono">
                 Fill in your details below to send an instant message.
               </p>
 
               {status.submitted ? (
-                <div className="p-8 bg-white/10 border border-white/20 rounded-3xl flex flex-col items-center text-center space-y-3 animate-fadeIn">
-                  <CheckCircle2 className="w-14 h-14 text-emerald-400" />
-                  <h4 className="text-xl font-black text-white">Message Sent Successfully!</h4>
-                  <p className="text-xs text-zinc-300 max-w-md font-mono">
+                <div className="p-8 bg-slate-50 border border-slate-200 rounded-3xl flex flex-col items-center text-center space-y-3 animate-fadeIn">
+                  <CheckCircle2 className="w-14 h-14 text-emerald-600" />
+                  <h4 className="text-xl font-black text-slate-900">Message Sent Successfully!</h4>
+                  <p className="text-xs text-slate-600 max-w-md font-mono">
                     Thank you for reaching out, Harigovind will respond to your email as soon as possible.
                   </p>
                   <button
                     onClick={() => setStatus({ submitting: false, submitted: false, error: false })}
-                    className="mt-2 text-xs font-mono text-white font-bold hover:underline"
+                    className="mt-2 text-xs font-mono text-slate-900 font-bold hover:underline"
                   >
                     Send another message
                   </button>
@@ -166,7 +162,7 @@ export default function Contact() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div>
-                    <label className="block text-xs font-mono uppercase tracking-wider text-zinc-400 font-black mb-2">
+                    <label className="block text-xs font-mono uppercase tracking-wider text-slate-500 font-bold mb-2">
                       Your Name
                     </label>
                     <input
@@ -176,12 +172,12 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="e.g. Alex Smith"
-                      className="w-full px-4 py-3.5 rounded-2xl bg-zinc-950/90 border border-white/10 text-white placeholder-zinc-600 focus:outline-none focus:border-white/50 focus:ring-1 focus:ring-white/40 text-sm transition-all font-medium"
+                      className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-slate-400 focus:ring-1 focus:ring-slate-300 text-sm transition-all font-medium"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-mono uppercase tracking-wider text-zinc-400 font-black mb-2">
+                    <label className="block text-xs font-mono uppercase tracking-wider text-slate-500 font-bold mb-2">
                       Your Email Address
                     </label>
                     <input
@@ -191,12 +187,12 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="alex@company.com"
-                      className="w-full px-4 py-3.5 rounded-2xl bg-zinc-950/90 border border-white/10 text-white placeholder-zinc-600 focus:outline-none focus:border-white/50 focus:ring-1 focus:ring-white/40 text-sm transition-all font-medium"
+                      className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-slate-400 focus:ring-1 focus:ring-slate-300 text-sm transition-all font-medium"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-mono uppercase tracking-wider text-zinc-400 font-black mb-2">
+                    <label className="block text-xs font-mono uppercase tracking-wider text-slate-500 font-bold mb-2">
                       Message
                     </label>
                     <textarea
@@ -206,12 +202,12 @@ export default function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Discussing job opportunity, ML project collaboration..."
-                      className="w-full px-4 py-3.5 rounded-2xl bg-zinc-950/90 border border-white/10 text-white placeholder-zinc-600 focus:outline-none focus:border-white/50 focus:ring-1 focus:ring-white/40 text-sm transition-all resize-none font-medium"
+                      className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-slate-400 focus:ring-1 focus:ring-slate-300 text-sm transition-all resize-none font-medium"
                     ></textarea>
                   </div>
 
                   {status.error && (
-                    <div className="p-3 bg-rose-500/10 border border-rose-500/30 rounded-xl text-xs text-rose-300 flex items-center gap-2">
+                    <div className="p-3 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-700 flex items-center gap-2">
                       <AlertCircle className="w-4 h-4 shrink-0" />
                       <span>An error occurred while sending. Please try emailing directly.</span>
                     </div>
@@ -220,7 +216,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={status.submitting}
-                    className="w-full py-4 rounded-full bg-white text-zinc-950 hover:bg-zinc-200 font-black text-sm shadow-2xl transition-all flex items-center justify-center gap-2 transform hover:-translate-y-0.5 disabled:opacity-50"
+                    className="w-full py-4 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 transform hover:-translate-y-0.5 disabled:opacity-50"
                   >
                     {status.submitting ? (
                       <span>Sending Message...</span>

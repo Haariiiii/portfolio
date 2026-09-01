@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, FileText, Sparkles, Terminal } from 'lucide-react';
+import { Menu, X, FileText, Terminal, ArrowUpRight } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function Navbar({ activeSection }) {
@@ -37,10 +37,10 @@ export default function Navbar({ activeSection }) {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80 shadow-lg shadow-cyan-950/10 py-3'
-          : 'bg-transparent py-5'
+          ? 'bg-slate-950/85 backdrop-blur-xl border-b border-white/10 py-3 shadow-2xl shadow-emerald-950/20'
+          : 'bg-transparent py-6'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -52,33 +52,35 @@ export default function Navbar({ activeSection }) {
             e.preventDefault();
             scrollToSection('hero');
           }}
-          className="flex items-center gap-2 group cursor-pointer"
+          className="flex items-center gap-3 group cursor-pointer"
         >
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 via-indigo-500 to-emerald-400 p-[1px] shadow-md shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition-all">
-            <div className="w-full h-full bg-slate-950 rounded-[11px] flex items-center justify-center">
-              <Terminal className="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform" />
+          <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-emerald-400 via-teal-500 to-indigo-500 p-[1.5px] shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-all">
+            <div className="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center">
+              <Terminal className="w-5 h-5 text-emerald-400 group-hover:rotate-12 transition-transform" />
             </div>
           </div>
           <div className="flex flex-col">
-            <span className="text-slate-100 font-bold text-lg tracking-tight group-hover:text-cyan-400 transition-colors">
+            <span className="text-white font-extrabold text-lg tracking-tight group-hover:text-emerald-400 transition-colors">
               {personalInfo.name}
             </span>
-            <span className="text-[10px] text-cyan-400/90 font-mono tracking-wider">DATA SCIENCE & AI</span>
+            <span className="text-[10px] text-emerald-400 font-mono tracking-widest uppercase">
+              DATA SCIENCE & AI
+            </span>
           </div>
         </a>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-1 bg-slate-900/60 backdrop-blur border border-slate-800/80 p-1.5 rounded-full">
+        <nav className="hidden lg:flex items-center gap-1 bg-slate-900/60 backdrop-blur-xl border border-white/10 p-1.5 rounded-full shadow-inner">
           {navItems.map((item) => {
             const isActive = activeSection === item.id;
             return (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
+                className={`px-4 py-2 rounded-full text-xs font-semibold tracking-wide transition-all ${
                   isActive
-                    ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 shadow-sm'
-                    : 'text-slate-300 hover:text-white hover:bg-slate-800/50'
+                    ? 'bg-gradient-to-r from-emerald-500/20 to-teal-500/20 text-emerald-400 border border-emerald-500/40 shadow-sm'
+                    : 'text-slate-400 hover:text-slate-100 hover:bg-white/5'
                 }`}
               >
                 {item.label}
@@ -92,10 +94,11 @@ export default function Navbar({ activeSection }) {
           <a
             href={personalInfo.resumePath}
             download="Harigovind_P_Resume.pdf"
-            className="flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white shadow-md shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all transform hover:-translate-y-0.5"
+            className="flex items-center gap-2 px-5 py-2.5 text-xs font-extrabold rounded-full bg-gradient-to-r from-emerald-400 via-teal-400 to-indigo-500 hover:from-emerald-300 hover:to-indigo-400 text-slate-950 shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/40 transition-all transform hover:-translate-y-0.5"
           >
             <FileText className="w-4 h-4" />
-            <span>Download Resume</span>
+            <span>Resume</span>
+            <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
         </div>
 
@@ -104,7 +107,7 @@ export default function Navbar({ activeSection }) {
           <a
             href={personalInfo.resumePath}
             download="Harigovind_P_Resume.pdf"
-            className="p-2 text-xs rounded-lg bg-cyan-500/20 text-cyan-300 border border-cyan-500/40"
+            className="p-2.5 text-xs rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/40"
             title="Download Resume"
           >
             <FileText className="w-4 h-4" />
@@ -112,17 +115,17 @@ export default function Navbar({ activeSection }) {
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white focus:outline-none"
+            className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-300 hover:text-white focus:outline-none"
             aria-label="Toggle Navigation Menu"
           >
-            {mobileMenuOpen ? <X className="w-5 h-5 text-cyan-400" /> : <Menu className="w-5 h-5" />}
+            {mobileMenuOpen ? <X className="w-5 h-5 text-emerald-400" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[70px] bg-slate-950/95 backdrop-blur-xl border-b border-slate-800 p-6 shadow-2xl animate-fadeIn">
+        <div className="lg:hidden fixed inset-x-0 top-[76px] bg-slate-950/95 backdrop-blur-2xl border-b border-white/10 p-6 shadow-2xl animate-fadeIn">
           <div className="flex flex-col gap-2">
             {navItems.map((item) => {
               const isActive = activeSection === item.id;
@@ -130,9 +133,9 @@ export default function Navbar({ activeSection }) {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`px-4 py-3 rounded-xl text-left text-sm font-medium transition-all ${
+                  className={`px-4 py-3 rounded-2xl text-left text-sm font-semibold transition-all ${
                     isActive
-                      ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40'
+                      ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
                       : 'text-slate-300 hover:bg-slate-900'
                   }`}
                 >
@@ -141,11 +144,11 @@ export default function Navbar({ activeSection }) {
               );
             })}
 
-            <div className="pt-4 border-t border-slate-800/80 mt-2">
+            <div className="pt-4 border-t border-white/10 mt-2">
               <a
                 href={personalInfo.resumePath}
                 download="Harigovind_P_Resume.pdf"
-                className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 text-white font-semibold text-sm shadow-lg shadow-cyan-500/20"
+                className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl bg-gradient-to-r from-emerald-400 to-indigo-500 text-slate-950 font-extrabold text-sm shadow-lg shadow-emerald-500/20"
               >
                 <FileText className="w-4 h-4" />
                 <span>Download Resume</span>

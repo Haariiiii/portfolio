@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/sections/Hero';
+import MarqueeTicker from './components/MarqueeTicker';
 import About from './components/sections/About';
 import Skills from './components/sections/Skills';
 import Projects from './components/sections/Projects';
@@ -39,7 +40,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-cyan-500/30 selection:text-cyan-200 bg-grid-pattern relative">
+    <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-emerald-500/30 selection:text-emerald-200 bg-dots-pattern relative">
       
       {/* Top Navbar */}
       <Navbar activeSection={activeSection} />
@@ -47,6 +48,7 @@ export default function App() {
       {/* Main Sections */}
       <main>
         <Hero />
+        <MarqueeTicker />
         <About />
         <Skills />
         <Projects />

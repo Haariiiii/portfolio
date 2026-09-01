@@ -10,8 +10,32 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
-          {/* Left Hero Column: Clean Typography & 2 Buttons */}
-          <div className="lg:col-span-7 flex flex-col items-start text-left">
+          {/* Profile Avatar Column: Rendered FIRST on Mobile (order-1), Right Column on Desktop (lg:order-2) */}
+          <div className="lg:col-span-5 flex flex-col items-center justify-center relative order-1 lg:order-2 mb-2 lg:mb-0">
+            <div className="relative group">
+              <div className="absolute -inset-3 rounded-full bg-slate-200/50 blur-2xl opacity-70 group-hover:opacity-100 transition-opacity"></div>
+
+              {/* Responsive Round Profile Avatar */}
+              <div className="relative w-60 h-60 sm:w-80 sm:h-80 lg:w-[410px] lg:h-[410px] rounded-full bg-white p-2 sm:p-2.5 border-4 border-slate-200/90 shadow-2xl overflow-hidden transition-transform duration-500 group-hover:scale-102">
+                <img
+                  src={personalInfo.profileImage}
+                  alt={personalInfo.name}
+                  className="w-full h-full object-cover rounded-full"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    if (e.target.nextSibling) e.target.nextSibling.style.display = 'flex';
+                  }}
+                />
+                <div className="hidden w-full h-full items-center justify-center font-bold text-4xl sm:text-5xl font-mono text-slate-700 bg-slate-100 rounded-full">
+                  HP
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          {/* Text/Heading Column: Rendered SECOND on Mobile (order-2), Left Column on Desktop (lg:order-1) */}
+          <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1">
             
             {/* Tagline */}
             <span className="text-xs font-mono text-slate-500 uppercase tracking-widest font-bold mb-2">
@@ -34,7 +58,7 @@ export default function Hero() {
             </p>
 
             {/* 2 ESSENTIAL ACTION BUTTONS */}
-            <div className="flex flex-wrap items-center gap-4 mb-8 w-full sm:w-auto">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-8 w-full sm:w-auto">
               <a
                 href="#projects"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-md transition-all transform hover:-translate-y-0.5"
@@ -54,7 +78,7 @@ export default function Hero() {
             </div>
 
             {/* Social Links & Location */}
-            <div className="flex flex-wrap items-center gap-6 pt-5 border-t border-slate-200/80 w-full">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-5 border-t border-slate-200/80 w-full">
               <div className="flex items-center gap-3">
                 <a
                   href={personalInfo.social.github}
@@ -91,30 +115,6 @@ export default function Hero() {
               </div>
             </div>
 
-          </div>
-
-          {/* Right Column: EXTRA LARGE ROUND PROFILE AVATAR (NO TEXT ABOVE) */}
-          <div className="lg:col-span-5 flex flex-col items-center justify-center relative">
-            <div className="relative group">
-              <div className="absolute -inset-3 rounded-full bg-slate-200/50 blur-2xl opacity-70 group-hover:opacity-100 transition-opacity"></div>
-
-              {/* Extra Large Round Profile Avatar */}
-              <div className="relative w-72 h-72 sm:w-88 sm:h-88 lg:w-[410px] lg:h-[410px] rounded-full bg-white p-2.5 border-4 border-slate-200/90 shadow-2xl overflow-hidden transition-transform duration-500 group-hover:scale-102">
-                <img
-                  src={personalInfo.profileImage}
-                  alt={personalInfo.name}
-                  className="w-full h-full object-cover rounded-full"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    if (e.target.nextSibling) e.target.nextSibling.style.display = 'flex';
-                  }}
-                />
-                <div className="hidden w-full h-full items-center justify-center font-bold text-5xl font-mono text-slate-700 bg-slate-100 rounded-full">
-                  HP
-                </div>
-              </div>
-
-            </div>
           </div>
 
         </div>

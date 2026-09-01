@@ -7,15 +7,15 @@ export const personalInfo = {
   headline: "Computer Science & Engineering Graduate",
   bio: "Computer Science & Engineering graduate focused on turning data into intelligent solutions using Machine Learning, AI and modern software technologies.",
   location: "Kasargod, Kerala, India",
-  email: "harigovindp.dev@gmail.com",
+  email: "harigovindp004@gmail.com",
   social: {
     github: "https://github.com/Haariiiii",
     linkedin: "https://linkedin.com/in/harigovind-p",
-    emailLink: "mailto:harigovindp.dev@gmail.com"
+    emailLink: "mailto:harigovindp004@gmail.com"
   },
   resumePath: "/resume.pdf", // Place your updated resume.pdf in the public/ folder
   profileImage: "/profile.png", // Profile image path in public folder
-  formspreeEndpoint: "https://formspree.io/f/your_form_id" // Replace with your actual Formspree endpoint or EmailJS key
+  formspreeEndpoint: "https://formsubmit.co/ajax/harigovindp004@gmail.com" // Direct email delivery to harigovindp004@gmail.com
 };
 
 export const aboutData = {

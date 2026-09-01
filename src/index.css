@@ -7,7 +7,7 @@
   }
   
   body {
-    background-color: #050505;
+    background-color: #030406;
     color: #f4f4f5;
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     overflow-x: hidden;
@@ -19,19 +19,19 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #050505;
+  background: #030406;
 }
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: #1e293b;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #52525b;
+  background: #10b981;
 }
 
-/* Dymas Alfin Style Editorial Card */
-.editorial-card {
-  background: rgba(18, 18, 20, 0.75);
+/* Futuristic Card Token */
+.futuristic-card {
+  background: rgba(12, 16, 22, 0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -39,46 +39,71 @@
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.editorial-card:hover {
-  background: rgba(26, 26, 30, 0.9);
-  border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 30px -10px rgba(255, 255, 255, 0.06);
+.futuristic-card:hover {
+  background: rgba(18, 24, 34, 0.9);
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 20px 40px -15px rgba(16, 185, 129, 0.2), 0 0 30px -5px rgba(16, 185, 129, 0.12);
   transform: translateY(-4px);
 }
 
-/* High Contrast Editorial Text Gradient */
-.text-gradient-editorial {
-  background: linear-gradient(180deg, #ffffff 0%, #a1a1aa 100%);
+/* Futuristic Text Gradients (No Blue, No Cyan) */
+.text-gradient-futuristic {
+  background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 50%, #34d399 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.text-gradient-accent {
-  background: linear-gradient(135deg, #ffffff 0%, #38bdf8 50%, #818cf8 100%);
+.text-gradient-emerald {
+  background: linear-gradient(135deg, #00ff88 0%, #10b981 50%, #059669 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Background Grid Lines */
-.bg-grid-editorial {
-  background-size: 40px 40px;
+.text-gradient-silver {
+  background: linear-gradient(180deg, #ffffff 0%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Futuristic Grid Lines */
+.bg-futuristic-grid {
+  background-size: 32px 32px;
   background-image: 
     linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
 
 /* Continuous Marquee Ticker */
-@keyframes marqueeEditorial {
+@keyframes marqueeFuturistic {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-50%); }
 }
 
-.animate-marquee-editorial {
+.animate-marquee-futuristic {
   display: flex;
   width: 200%;
-  animation: marqueeEditorial 28s linear infinite;
+  animation: marqueeFuturistic 26s linear infinite;
 }
 
-.animate-marquee-editorial:hover {
+.animate-marquee-futuristic:hover {
   animation-play-state: paused;
+}
+
+/* Pulse Glow & Floating Animations */
+@keyframes pulseEmerald {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.03); opacity: 1; }
+}
+
+.animate-pulse-emerald {
+  animation: pulseEmerald 5s ease-in-out infinite;
+}
+
+@keyframes floatFuturistic {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float-futuristic {
+  animation: floatFuturistic 5s ease-in-out infinite;
 }

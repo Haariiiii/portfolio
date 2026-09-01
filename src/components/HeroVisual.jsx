@@ -69,7 +69,7 @@ export default function HeroVisual() {
             ctx.moveTo(n1.x, n1.y);
             ctx.lineTo(n2.x, n2.y);
             const alpha = 0.12 + Math.sin(n1.pulse) * 0.08;
-            ctx.strokeStyle = `rgba(168, 85, 247, ${alpha})`;
+            ctx.strokeStyle = `rgba(16, 185, 129, ${alpha})`;
             ctx.lineWidth = 1;
             ctx.stroke();
 
@@ -79,7 +79,7 @@ export default function HeroVisual() {
 
             ctx.beginPath();
             ctx.arc(signalX, signalY, 2.5, 0, Math.PI * 2);
-            ctx.fillStyle = progress > 0.5 ? '#a855f7' : '#38bdf8';
+            ctx.fillStyle = progress > 0.5 ? '#00ff88' : '#ffffff';
             ctx.shadowColor = ctx.fillStyle;
             ctx.shadowBlur = 6;
             ctx.fill();
@@ -93,7 +93,7 @@ export default function HeroVisual() {
         ctx.beginPath();
         const r = n.radius + Math.sin(n.pulse) * 1.5;
         ctx.arc(n.x, n.y, r, 0, Math.PI * 2);
-        ctx.fillStyle = n.layer === 0 ? '#38bdf8' : n.layer === layers.length - 1 ? '#a855f7' : '#818cf8';
+        ctx.fillStyle = n.layer === 0 ? '#10b981' : n.layer === layers.length - 1 ? '#00ff88' : '#ffffff';
         ctx.shadowColor = ctx.fillStyle;
         ctx.shadowBlur = 10;
         ctx.fill();
@@ -114,10 +114,10 @@ export default function HeroVisual() {
   return (
     <div className="relative w-full max-w-lg mx-auto">
       {/* Decorative Glow Background */}
-      <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-purple-500/20 via-indigo-500/20 to-cyan-500/20 blur-2xl opacity-80 animate-pulse-slow"></div>
+      <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-emerald-500/20 via-teal-500/20 to-emerald-500/20 blur-2xl opacity-80 animate-pulse-emerald"></div>
 
       {/* Main Container Window */}
-      <div className="relative dribbble-card rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-slate-950/90">
+      <div className="relative futuristic-card rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-slate-950/90">
         
         {/* Window Bar Header */}
         <div className="px-5 py-3.5 bg-slate-900/90 border-b border-white/10 flex items-center justify-between">
@@ -126,7 +126,7 @@ export default function HeroVisual() {
             <span className="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
             <span className="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
             <span className="ml-2 text-xs font-mono text-slate-400 flex items-center gap-1.5 font-bold">
-              <Terminal className="w-3.5 h-3.5 text-purple-400" />
+              <Terminal className="w-3.5 h-3.5 text-emerald-400" />
               harigovind-ai-runtime.py
             </span>
           </div>
@@ -136,7 +136,7 @@ export default function HeroVisual() {
               onClick={() => setActiveTab('visual')}
               className={`px-3 py-1 text-xs font-bold font-mono rounded-lg transition-all ${
                 activeTab === 'visual'
-                  ? 'bg-purple-500/20 text-purple-300 border border-purple-500/40'
+                  ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
                   : 'text-slate-400 hover:text-slate-200'
               }`}
             >
@@ -146,7 +146,7 @@ export default function HeroVisual() {
               onClick={() => setActiveTab('code')}
               className={`px-3 py-1 text-xs font-bold font-mono rounded-lg transition-all ${
                 activeTab === 'code'
-                  ? 'bg-purple-500/20 text-purple-300 border border-purple-500/40'
+                  ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
                   : 'text-slate-400 hover:text-slate-200'
               }`}
             >
@@ -161,13 +161,13 @@ export default function HeroVisual() {
             <div className="relative h-52 w-full bg-slate-950 rounded-2xl overflow-hidden border border-white/10 flex items-center justify-center">
               <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
               
-              <div className="absolute top-3 left-3 bg-slate-900/90 backdrop-blur border border-purple-500/30 px-3 py-1 rounded-full text-[10px] font-mono text-purple-300 flex items-center gap-1.5 shadow-sm font-bold">
+              <div className="absolute top-3 left-3 bg-slate-900/90 backdrop-blur border border-emerald-500/30 px-3 py-1 rounded-full text-[10px] font-mono text-emerald-300 flex items-center gap-1.5 shadow-sm font-bold">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping inline-block"></span>
                 YOLO11 Real-Time Inference
               </div>
 
-              <div className="absolute bottom-3 right-3 bg-slate-900/90 backdrop-blur border border-purple-500/30 px-3 py-1 rounded-full text-[10px] font-mono text-cyan-300 flex items-center gap-1 font-bold">
-                <Zap className="w-3.5 h-3.5 text-cyan-400" />
+              <div className="absolute bottom-3 right-3 bg-slate-900/90 backdrop-blur border border-emerald-500/30 px-3 py-1 rounded-full text-[10px] font-mono text-emerald-300 flex items-center gap-1 font-bold">
+                <Zap className="w-3.5 h-3.5 text-emerald-400" />
                 GPU Speed: {metrics.fps} FPS
               </div>
             </div>
@@ -176,7 +176,7 @@ export default function HeroVisual() {
             <div className="grid grid-cols-2 gap-3">
               <div className="bg-slate-900/60 border border-white/10 p-3.5 rounded-2xl flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
-                  <Activity className="w-4 h-4 text-purple-400" />
+                  <Activity className="w-4 h-4 text-emerald-400" />
                   <div>
                     <div className="text-[10px] font-mono text-slate-400 uppercase font-bold">Inference Time</div>
                     <div className="text-sm font-extrabold font-mono text-white">{metrics.inference} ms</div>
@@ -187,13 +187,13 @@ export default function HeroVisual() {
 
               <div className="bg-slate-900/60 border border-white/10 p-3.5 rounded-2xl flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
-                  <ShieldCheck className="w-4 h-4 text-cyan-400" />
+                  <ShieldCheck className="w-4 h-4 text-emerald-400" />
                   <div>
                     <div className="text-[10px] font-mono text-slate-400 uppercase font-bold">mAP@0.50 Score</div>
                     <div className="text-sm font-extrabold font-mono text-white">88.10%</div>
                   </div>
                 </div>
-                <span className="text-[10px] text-purple-300 font-mono font-bold">High</span>
+                <span className="text-[10px] text-emerald-300 font-mono font-bold">High</span>
               </div>
             </div>
           </div>
@@ -201,25 +201,25 @@ export default function HeroVisual() {
           /* Tab Content 2: Live Code Pipeline Snippet */
           <div className="p-6 bg-slate-950 font-mono text-xs text-slate-300 leading-relaxed overflow-x-auto min-h-[288px]">
             <div className="text-slate-500 mb-2"># Harigovind P - Computer Vision & AI Model Execution</div>
-            <div className="text-purple-400">import <span className="text-slate-200">torch, cv2</span></div>
-            <div className="text-purple-400">from <span className="text-slate-200">ultralytics</span> import <span className="text-cyan-300 font-bold">YOLO</span></div>
-            <div className="text-purple-400">from <span className="text-slate-200">data_analytics</span> import <span className="text-purple-300 font-bold">SalaryPredictor</span></div>
+            <div className="text-emerald-400">import <span className="text-slate-200">torch, cv2</span></div>
+            <div className="text-emerald-400">from <span className="text-slate-200">ultralytics</span> import <span className="text-white font-bold">YOLO</span></div>
+            <div className="text-emerald-400">from <span className="text-slate-200">data_analytics</span> import <span className="text-emerald-300 font-bold">SalaryPredictor</span></div>
             <br />
             <div className="text-slate-500"># 1. Initialize YOLO11 Pothole Detector</div>
-            <div><span className="text-cyan-300 font-bold">model</span> = YOLO(<span className="text-emerald-300">'yolo11s_pothole.pt'</span>)</div>
-            <div><span className="text-cyan-300 font-bold">results</span> = model.predict(source=<span className="text-emerald-300">'dashcam.mp4'</span>, conf=<span className="text-amber-300">0.50</span>)</div>
+            <div><span className="text-white font-bold">model</span> = YOLO(<span className="text-emerald-300">'yolo11s_pothole.pt'</span>)</div>
+            <div><span className="text-white font-bold">results</span> = model.predict(source=<span className="text-emerald-300">'dashcam.mp4'</span>, conf=<span className="text-amber-300">0.50</span>)</div>
             <br />
             <div className="text-slate-500"># 2. Extract Smart Lane Departure Features</div>
-            <div><span className="text-cyan-300 font-bold">lane_metrics</span> = analyze_lanes(frame, sliding_window=<span className="text-purple-300">True</span>)</div>
+            <div><span className="text-white font-bold">lane_metrics</span> = analyze_lanes(frame, sliding_window=<span className="text-emerald-300">True</span>)</div>
             <div className="text-slate-500"># 3. Stream Live Metrics Endpoint</div>
-            <div><span className="text-cyan-300 font-bold">server</span>.broadcast_event(potholes=results, metrics=lane_metrics)</div>
+            <div><span className="text-white font-bold">server</span>.broadcast_event(potholes=results, metrics=lane_metrics)</div>
           </div>
         )}
 
         {/* Footer Status bar */}
         <div className="px-5 py-2.5 bg-slate-900/90 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-slate-400">
           <span className="flex items-center gap-1.5">
-            <Database className="w-3.5 h-3.5 text-purple-400" />
+            <Database className="w-3.5 h-3.5 text-emerald-400" />
             PyTorch • Scikit-Learn • OpenCV
           </span>
           <span className="text-emerald-400 font-bold">● Active Deployment</span>

@@ -39,7 +39,7 @@ export default function Navbar({ activeSection }) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-slate-950/85 backdrop-blur-xl border-b border-white/10 py-3 shadow-2xl shadow-emerald-950/20'
+          ? 'bg-zinc-950/90 backdrop-blur-2xl border-b border-white/10 py-3 shadow-2xl'
           : 'bg-transparent py-6'
       }`}
     >
@@ -54,33 +54,33 @@ export default function Navbar({ activeSection }) {
           }}
           className="flex items-center gap-3 group cursor-pointer"
         >
-          <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-emerald-400 via-teal-500 to-indigo-500 p-[1.5px] shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-all">
-            <div className="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center">
-              <Terminal className="w-5 h-5 text-emerald-400 group-hover:rotate-12 transition-transform" />
+          <div className="w-10 h-10 rounded-2xl bg-white/10 border border-white/20 p-[1px] group-hover:border-white/40 transition-all">
+            <div className="w-full h-full bg-zinc-950 rounded-[14px] flex items-center justify-center">
+              <Terminal className="w-5 h-5 text-white group-hover:rotate-12 transition-transform" />
             </div>
           </div>
           <div className="flex flex-col">
-            <span className="text-white font-extrabold text-lg tracking-tight group-hover:text-emerald-400 transition-colors">
+            <span className="text-white font-black text-lg tracking-tight group-hover:text-zinc-300 transition-colors">
               {personalInfo.name}
             </span>
-            <span className="text-[10px] text-emerald-400 font-mono tracking-widest uppercase">
+            <span className="text-[10px] text-zinc-400 font-mono tracking-widest uppercase font-bold">
               DATA SCIENCE & AI
             </span>
           </div>
         </a>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-1 bg-slate-900/60 backdrop-blur-xl border border-white/10 p-1.5 rounded-full shadow-inner">
+        <nav className="hidden lg:flex items-center gap-1 bg-zinc-900/80 backdrop-blur-2xl border border-white/10 p-1.5 rounded-full shadow-2xl">
           {navItems.map((item) => {
             const isActive = activeSection === item.id;
             return (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`px-4 py-2 rounded-full text-xs font-semibold tracking-wide transition-all ${
+                className={`px-4 py-2 rounded-full text-xs font-bold tracking-wide transition-all ${
                   isActive
-                    ? 'bg-gradient-to-r from-emerald-500/20 to-teal-500/20 text-emerald-400 border border-emerald-500/40 shadow-sm'
-                    : 'text-slate-400 hover:text-slate-100 hover:bg-white/5'
+                    ? 'bg-white text-zinc-950 shadow-md'
+                    : 'text-zinc-400 hover:text-white hover:bg-white/10'
                 }`}
               >
                 {item.label}
@@ -94,7 +94,7 @@ export default function Navbar({ activeSection }) {
           <a
             href={personalInfo.resumePath}
             download="Harigovind_P_Resume.pdf"
-            className="flex items-center gap-2 px-5 py-2.5 text-xs font-extrabold rounded-full bg-gradient-to-r from-emerald-400 via-teal-400 to-indigo-500 hover:from-emerald-300 hover:to-indigo-400 text-slate-950 shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/40 transition-all transform hover:-translate-y-0.5"
+            className="flex items-center gap-2 px-5 py-2.5 text-xs font-black rounded-full bg-white text-zinc-950 hover:bg-zinc-200 shadow-xl transition-all transform hover:-translate-y-0.5"
           >
             <FileText className="w-4 h-4" />
             <span>Resume</span>
@@ -107,7 +107,7 @@ export default function Navbar({ activeSection }) {
           <a
             href={personalInfo.resumePath}
             download="Harigovind_P_Resume.pdf"
-            className="p-2.5 text-xs rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/40"
+            className="p-2.5 text-xs rounded-xl bg-white/10 text-white border border-white/20"
             title="Download Resume"
           >
             <FileText className="w-4 h-4" />
@@ -115,17 +115,17 @@ export default function Navbar({ activeSection }) {
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2.5 rounded-xl bg-slate-900 border border-white/10 text-slate-300 hover:text-white focus:outline-none"
+            className="p-2.5 rounded-xl bg-zinc-900 border border-white/10 text-zinc-300 hover:text-white focus:outline-none"
             aria-label="Toggle Navigation Menu"
           >
-            {mobileMenuOpen ? <X className="w-5 h-5 text-emerald-400" /> : <Menu className="w-5 h-5" />}
+            {mobileMenuOpen ? <X className="w-5 h-5 text-white" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[76px] bg-slate-950/95 backdrop-blur-2xl border-b border-white/10 p-6 shadow-2xl animate-fadeIn">
+        <div className="lg:hidden fixed inset-x-0 top-[76px] bg-zinc-950/98 backdrop-blur-2xl border-b border-white/10 p-6 shadow-2xl animate-fadeIn">
           <div className="flex flex-col gap-2">
             {navItems.map((item) => {
               const isActive = activeSection === item.id;
@@ -133,10 +133,10 @@ export default function Navbar({ activeSection }) {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`px-4 py-3 rounded-2xl text-left text-sm font-semibold transition-all ${
+                  className={`px-4 py-3 rounded-2xl text-left text-sm font-extrabold transition-all ${
                     isActive
-                      ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
-                      : 'text-slate-300 hover:bg-slate-900'
+                      ? 'bg-white text-zinc-950'
+                      : 'text-zinc-300 hover:bg-zinc-900'
                   }`}
                 >
                   {item.label}
@@ -148,7 +148,7 @@ export default function Navbar({ activeSection }) {
               <a
                 href={personalInfo.resumePath}
                 download="Harigovind_P_Resume.pdf"
-                className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl bg-gradient-to-r from-emerald-400 to-indigo-500 text-slate-950 font-extrabold text-sm shadow-lg shadow-emerald-500/20"
+                className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl bg-white text-zinc-950 font-black text-sm shadow-xl"
               >
                 <FileText className="w-4 h-4" />
                 <span>Download Resume</span>

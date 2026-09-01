@@ -1,49 +1,43 @@
 import React from 'react';
-import { Mail, FileText, ArrowRight, MapPin, Sparkles } from 'lucide-react';
+import { Mail, FileText, ArrowRight, MapPin } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../SocialIcons';
 import { personalInfo } from '../../data/portfolioData';
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-minimal-grid bg-white">
+    <section id="hero" className="relative pt-28 pb-14 md:pt-36 md:pb-16 overflow-hidden bg-minimal-grid bg-white">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
-          {/* Left Hero Column: Clean Minimalist Content & 2 Essential Buttons */}
+          {/* Left Hero Column: Clean Typography & 2 Buttons */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             
-            {/* Status Pill */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-mono font-semibold mb-6 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>Available for Data Science & AI Roles</span>
-            </div>
-
-            {/* Sub-headline tag */}
+            {/* Tagline */}
             <span className="text-xs font-mono text-slate-500 uppercase tracking-widest font-bold mb-2">
               Computer Science & Engineering Graduate
             </span>
 
-            {/* Main Name */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 mb-4 leading-none">
+            {/* Name */}
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 mb-3 leading-none">
               {personalInfo.name}
             </h1>
 
             {/* Specialty */}
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-700 mb-6 leading-snug">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-700 mb-5 leading-snug">
               Data Science, Machine Learning & AI Specialist
             </h2>
 
             {/* Bio */}
-            <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8 max-w-xl font-normal">
-              Focused on turning complex data into practical, intelligent solutions using Python, Machine Learning, Computer Vision (YOLO11), and modern data software engineering.
+            <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-6 max-w-xl font-normal">
+              Focused on turning complex data into practical, intelligent solutions using Python, Machine Learning, Computer Vision (YOLO11), and modern data engineering.
             </p>
 
-            {/* ONLY TWO ESSENTIAL ACTION BUTTONS */}
-            <div className="flex flex-wrap items-center gap-4 mb-10 w-full sm:w-auto">
+            {/* 2 ESSENTIAL ACTION BUTTONS */}
+            <div className="flex flex-wrap items-center gap-4 mb-8 w-full sm:w-auto">
               <a
                 href="#projects"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-md transition-all transform hover:-translate-y-0.5"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-md transition-all transform hover:-translate-y-0.5"
               >
                 <span>View Projects</span>
                 <ArrowRight className="w-4 h-4" />
@@ -52,7 +46,7 @@ export default function Hero() {
               <a
                 href={personalInfo.resumePath}
                 download="Harigovind_P_Resume.pdf"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white hover:bg-slate-50 text-slate-900 border border-slate-300 font-bold text-sm transition-all transform hover:-translate-y-0.5 shadow-sm"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-slate-50 text-slate-900 border border-slate-300 font-bold text-sm transition-all transform hover:-translate-y-0.5 shadow-sm"
               >
                 <FileText className="w-4 h-4 text-slate-600" />
                 <span>Download Resume</span>
@@ -60,7 +54,7 @@ export default function Hero() {
             </div>
 
             {/* Social Links & Location */}
-            <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-slate-200/80 w-full">
+            <div className="flex flex-wrap items-center gap-6 pt-5 border-t border-slate-200/80 w-full">
               <div className="flex items-center gap-3">
                 <a
                   href={personalInfo.social.github}
@@ -99,17 +93,13 @@ export default function Hero() {
 
           </div>
 
-          {/* Right Column: CLEAN PERFECTLY ROUND PROFILE AVATAR (NO CLUTTER ABOVE) */}
+          {/* Right Column: EXTRA LARGE ROUND PROFILE AVATAR (NO TEXT ABOVE) */}
           <div className="lg:col-span-5 flex flex-col items-center justify-center relative">
-            
-            {/* Clean Rounded Avatar Frame */}
             <div className="relative group">
-              
-              {/* Subtle Ambient Ring */}
-              <div className="absolute -inset-2 rounded-full bg-slate-200/60 blur-xl opacity-70 group-hover:opacity-100 transition-opacity"></div>
+              <div className="absolute -inset-3 rounded-full bg-slate-200/50 blur-2xl opacity-70 group-hover:opacity-100 transition-opacity"></div>
 
-              {/* Perfectly Round Image Container */}
-              <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full bg-white p-2 border-4 border-slate-200/90 shadow-2xl overflow-hidden transition-transform duration-500 group-hover:scale-105">
+              {/* Extra Large Round Profile Avatar */}
+              <div className="relative w-72 h-72 sm:w-88 sm:h-88 lg:w-[410px] lg:h-[410px] rounded-full bg-white p-2.5 border-4 border-slate-200/90 shadow-2xl overflow-hidden transition-transform duration-500 group-hover:scale-102">
                 <img
                   src={personalInfo.profileImage}
                   alt={personalInfo.name}
@@ -119,13 +109,12 @@ export default function Hero() {
                     if (e.target.nextSibling) e.target.nextSibling.style.display = 'flex';
                   }}
                 />
-                <div className="hidden w-full h-full items-center justify-center font-bold text-4xl font-mono text-slate-700 bg-slate-100 rounded-full">
+                <div className="hidden w-full h-full items-center justify-center font-bold text-5xl font-mono text-slate-700 bg-slate-100 rounded-full">
                   HP
                 </div>
               </div>
 
             </div>
-
           </div>
 
         </div>

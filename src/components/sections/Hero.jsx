@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, FileText, ArrowRight, MapPin, Sparkles, Award, ShieldCheck } from 'lucide-react';
+import { Mail, FileText, ArrowRight, MapPin, Sparkles } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../SocialIcons';
 import { personalInfo } from '../../data/portfolioData';
 
@@ -10,16 +10,16 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          {/* Left Hero Column: Clean Minimalist Typography & 2 Essential Buttons */}
+          {/* Left Hero Column: Clean Minimalist Content & 2 Essential Buttons */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             
-            {/* Minimal Status Pill */}
+            {/* Status Pill */}
             <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-mono font-semibold mb-6 shadow-sm">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
               <span>Available for Data Science & AI Roles</span>
             </div>
 
-            {/* Sub-headline */}
+            {/* Sub-headline tag */}
             <span className="text-xs font-mono text-slate-500 uppercase tracking-widest font-bold mb-2">
               Computer Science & Engineering Graduate
             </span>
@@ -29,14 +29,14 @@ export default function Hero() {
               {personalInfo.name}
             </h1>
 
-            {/* Core Specialty */}
+            {/* Specialty */}
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-700 mb-6 leading-snug">
               Data Science, Machine Learning & AI Specialist
             </h2>
 
-            {/* Concise Bio */}
+            {/* Bio */}
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-8 max-w-xl font-normal">
-              Focused on turning complex data into practical, intelligent solutions using Python, Machine Learning, Computer Vision (YOLO11), and modern software engineering.
+              Focused on turning complex data into practical, intelligent solutions using Python, Machine Learning, Computer Vision (YOLO11), and modern data software engineering.
             </p>
 
             {/* ONLY TWO ESSENTIAL ACTION BUTTONS */}
@@ -99,48 +99,29 @@ export default function Hero() {
 
           </div>
 
-          {/* Right Column: LARGE Clean Minimalist Profile Photo Display */}
+          {/* Right Column: CLEAN PERFECTLY ROUND PROFILE AVATAR (NO CLUTTER ABOVE) */}
           <div className="lg:col-span-5 flex flex-col items-center justify-center relative">
             
-            {/* Minimal Photo Card Frame */}
-            <div className="relative w-full max-w-sm sm:max-w-md rounded-3xl bg-white p-2.5 border border-slate-200 shadow-xl group transition-all duration-300">
+            {/* Clean Rounded Avatar Frame */}
+            <div className="relative group">
               
-              {/* Photo Image Container */}
-              <div className="w-full h-[380px] sm:h-[430px] rounded-[22px] overflow-hidden relative bg-slate-100 border border-slate-200">
+              {/* Subtle Ambient Ring */}
+              <div className="absolute -inset-2 rounded-full bg-slate-200/60 blur-xl opacity-70 group-hover:opacity-100 transition-opacity"></div>
+
+              {/* Perfectly Round Image Container */}
+              <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full bg-white p-2 border-4 border-slate-200/90 shadow-2xl overflow-hidden transition-transform duration-500 group-hover:scale-105">
                 <img
                   src={personalInfo.profileImage}
                   alt={personalInfo.name}
-                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover rounded-full"
                   onError={(e) => {
                     e.target.style.display = 'none';
                     if (e.target.nextSibling) e.target.nextSibling.style.display = 'flex';
                   }}
                 />
-                <div className="hidden w-full h-full items-center justify-center font-bold text-4xl font-mono text-slate-700 bg-slate-100">
+                <div className="hidden w-full h-full items-center justify-center font-bold text-4xl font-mono text-slate-700 bg-slate-100 rounded-full">
                   HP
                 </div>
-
-                {/* Minimal Overlay Tag */}
-                <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-white/90 backdrop-blur-md border border-slate-200 flex items-center justify-between shadow-sm">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                    <span className="text-xs font-bold text-slate-900 font-mono">Harigovind P</span>
-                  </div>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200 font-semibold">
-                    CSE 2026
-                  </span>
-                </div>
-              </div>
-
-              {/* Minimal Badges */}
-              <div className="absolute -top-3 -right-3 px-3 py-1.5 rounded-xl bg-white border border-slate-200 shadow-md flex items-center gap-1.5 text-xs font-mono text-slate-800 font-bold">
-                <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                <span>88.1% mAP</span>
-              </div>
-
-              <div className="absolute -bottom-3 -left-3 px-3 py-1.5 rounded-xl bg-white border border-slate-200 shadow-md flex items-center gap-1.5 text-xs font-mono text-slate-800 font-bold">
-                <Award className="w-4 h-4 text-slate-700" />
-                <span>8.4 CGPA</span>
               </div>
 
             </div>

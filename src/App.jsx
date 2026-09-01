@@ -39,8 +39,27 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Smooth Scroll Reveal Animation Observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal-visible');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    const revealElements = document.querySelectorAll('.reveal-on-scroll');
+    revealElements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-emerald-500/30 selection:text-emerald-200 bg-dots-pattern relative">
+    <div className="min-h-screen bg-slate-50 text-slate-900 selection:bg-slate-900 selection:text-white relative">
       
       {/* Top Navbar */}
       <Navbar activeSection={activeSection} />
@@ -49,14 +68,14 @@ export default function App() {
       <main>
         <Hero />
         <MarqueeTicker />
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Education />
-        <Certifications />
-        <ResumeBanner />
-        <Contact />
+        <div className="reveal-on-scroll"><About /></div>
+        <div className="reveal-on-scroll"><Skills /></div>
+        <div className="reveal-on-scroll"><Projects /></div>
+        <div className="reveal-on-scroll"><Experience /></div>
+        <div className="reveal-on-scroll"><Education /></div>
+        <div className="reveal-on-scroll"><Certifications /></div>
+        <div className="reveal-on-scroll"><ResumeBanner /></div>
+        <div className="reveal-on-scroll"><Contact /></div>
       </main>
 
       {/* Footer */}

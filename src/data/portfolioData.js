@@ -58,17 +58,12 @@ export const skillCategories = [
   {
     name: "Machine Learning / AI",
     icon: "BrainCircuit",
-    skills: ["Machine Learning", "Deep Learning", "Computer Vision", "PyTorch", "TensorFlow", "YOLO"]
-  },
-  {
-    name: "Web Development",
-    icon: "Globe",
-    skills: ["HTML", "CSS", "JavaScript", "Django", "Flask"]
+    skills: ["Machine Learning", "Deep Learning", "Computer Vision", "PyTorch", "TensorFlow", "YOLO11"]
   },
   {
     name: "Tools & Environment",
     icon: "Terminal",
-    skills: ["Git", "GitHub", "VS Code", "Linux"]
+    skills: ["Git", "GitHub", "VS Code", "Linux", "Flask"]
   }
 ];
 
@@ -126,7 +121,7 @@ export const projectsData = [
   {
     id: "sales-performance-analysis",
     title: "Multi-Year Sales Performance & Profitability Analysis",
-    category: "Web & BI",
+    category: "Data Analytics & BI",
     featured: false,
     tagline: "Interactive Power BI dashboard analyzing multi-year sales performance and profitability using AdventureWorks data.",
     description: "An enterprise business intelligence dashboard built to analyze multi-year revenue, volume, and profit margins. Models data using a Star Schema architectural framework, utilizes complex DAX formulas for Year-over-Year (YoY) time intelligence calculations, and presents dynamic visual reports for executive decision-making.",

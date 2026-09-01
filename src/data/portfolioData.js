@@ -56,14 +56,9 @@ export const skillCategories = [
     skills: ["NumPy", "Pandas", "Matplotlib", "Seaborn", "Scikit-learn", "Power BI"]
   },
   {
-    name: "Machine Learning / AI",
+    name: "Machine Learning & AI",
     icon: "BrainCircuit",
-    skills: ["Machine Learning", "Deep Learning", "Computer Vision", "PyTorch", "TensorFlow", "YOLO11"]
-  },
-  {
-    name: "Tools & Environment",
-    icon: "Terminal",
-    skills: ["Git", "GitHub", "VS Code", "Linux", "Flask"]
+    skills: ["Machine Learning", "Deep Learning", "Computer Vision", "Generative AI", "PyTorch", "TensorFlow", "YOLO11"]
   }
 ];
 
@@ -145,11 +140,20 @@ export const projectsData = [
 
 export const educationData = [
   {
+    degree: "Data Science & Generative AI",
+    institution: "Entri Elevate",
+    location: "Kerala, India",
+    period: "2025 – Present",
+    status: "Pursuing / In Progress",
+    grade: "Gen AI Specialization",
+    details: "Advanced hands-on program focusing on Data Science, Machine Learning, Deep Learning, Generative AI models, Large Language Models (LLMs), and Prompt Engineering."
+  },
+  {
     degree: "B.Tech in Computer Science & Engineering",
     institution: "LBS College of Engineering",
     location: "Kasaragod, Kerala",
     period: "2022 – 2026",
-    status: "Completed / Expected 2026",
+    status: "Expected 2026",
     grade: "CGPA: 8.4 / 10",
     details: "Specializing in Computer Science & Engineering with coursework in Data Structures, Algorithms, Machine Learning, Operating Systems, Database Management Systems, and Artificial Intelligence."
   },

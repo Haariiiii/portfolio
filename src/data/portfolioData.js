@@ -14,7 +14,7 @@ export const personalInfo = {
     emailLink: "mailto:harigovindp.dev@gmail.com"
   },
   resumePath: "/resume.pdf", // Place your updated resume.pdf in the public/ folder
-  profileImage: "/profile.jpg", // Place your photo as profile.jpg in the public/ folder
+  profileImage: "/profile.png", // Profile image path in public folder
   formspreeEndpoint: "https://formspree.io/f/your_form_id" // Replace with your actual Formspree endpoint or EmailJS key
 };
 

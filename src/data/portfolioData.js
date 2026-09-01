@@ -9,7 +9,7 @@ export const personalInfo = {
   location: "Kasargod, Kerala, India",
   email: "harigovindp.dev@gmail.com",
   social: {
-    github: "https://github.com/harigovindp",
+    github: "https://github.com/Haariiiii",
     linkedin: "https://linkedin.com/in/harigovind-p",
     emailLink: "mailto:harigovindp.dev@gmail.com"
   },

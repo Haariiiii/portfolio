@@ -102,7 +102,7 @@ export default function Contact() {
                 <div>
                   <div className="text-[10px] font-mono text-slate-500 font-bold">LinkedIn Profile</div>
                   <div className="text-xs font-bold text-slate-900">
-                    harigovind-p
+                    harigovindp2004
                   </div>
                 </div>
               </a>

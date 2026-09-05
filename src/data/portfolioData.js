@@ -10,7 +10,7 @@ export const personalInfo = {
   email: "harigovindp004@gmail.com",
   social: {
     github: "https://github.com/Haariiiii",
-    linkedin: "https://linkedin.com/in/harigovind-p",
+    linkedin: "https://www.linkedin.com/in/harigovindp2004/",
     emailLink: "mailto:harigovindp004@gmail.com"
   },
   resumePath: "/resume.pdf", // Place your updated resume.pdf in the public/ folder
@@ -91,6 +91,28 @@ export const projectsData = [
     liveUrl: "https://pothole-lane-detection.vercel.app"
   },
   {
+    id: "bank-loan-project",
+    title: "Bank Loan Approval & Risk Assessment System",
+    category: "Data Science & ML",
+    featured: false,
+    tagline: "Machine learning web application evaluating bank loan applicant eligibility and risk assessment.",
+    description: "An intelligent Machine Learning web application designed to evaluate loan applications, credit histories, applicant income, and risk factors to predict loan approval status instantly. Provides automated risk decision support through a clean interactive dashboard.",
+    technologies: ["Python", "Machine Learning", "Scikit-learn", "Pandas", "React", "Vercel"],
+    highlights: [
+      "Trained predictive machine learning models for applicant risk classification and loan eligibility scoring",
+      "Evaluates key applicant attributes: income, credit score, loan amount, and debt-to-income metrics",
+      "Deploys real-time risk predictions with a responsive web dashboard hosted on Vercel",
+      "Automated feature engineering, missing data imputation, and model validation pipeline"
+    ],
+    results: [
+      { label: "Live App", value: "Active Web Dashboard" },
+      { label: "Model", value: "Loan Risk Classification" },
+      { label: "Platform", value: "Vercel Hosted" }
+    ],
+    githubUrl: "https://github.com/Haariiiii",
+    liveUrl: "https://bank-loan-project.vercel.app/"
+  },
+  {
     id: "indian-job-salary-prediction",
     title: "Indian Job Salary Prediction",
     category: "Data Science & ML",
@@ -110,7 +132,7 @@ export const projectsData = [
       { label: "Top Model", value: "Random Forest Regressor" },
       { label: "Evaluation", value: "R² & RMSE Benchmark" }
     ],
-    githubUrl: "https://github.com/harigovindp/indian-job-salary-prediction",
+    githubUrl: "https://github.com/Haariiiii/indian-job-salary-prediction",
     liveUrl: null
   },
   {
@@ -133,7 +155,7 @@ export const projectsData = [
       { label: "Analytics", value: "YoY & Profit Margin DAX Measures" },
       { label: "Tool", value: "Power BI Interactive Dashboard" }
     ],
-    githubUrl: "https://github.com/harigovindp/sales-profitability-analysis",
+    githubUrl: "https://github.com/Haariiiii/sales-profitability-analysis",
     liveUrl: null
   }
 ];
@@ -186,31 +208,13 @@ export const experienceData = [
 
 export const certificationsData = [
   {
-    title: "Data Science & Machine Learning Foundations",
-    issuer: "Online Certification / Academy",
-    year: "2024",
-    skills: ["Python", "Pandas", "Scikit-learn", "Machine Learning"],
-    verificationUrl: "https://example.com/cert/ds-ml"
-  },
-  {
-    title: "Deep Learning & Computer Vision",
-    issuer: "Specialization Course",
-    year: "2024",
-    skills: ["PyTorch", "OpenCV", "YOLO", "CNNs"],
-    verificationUrl: "https://example.com/cert/cv"
-  },
-  {
-    title: "SQL & Relational Database Design",
-    issuer: "Database Engineering Track",
-    year: "2023",
-    skills: ["SQL", "Relational Modeling", "Database Queries"],
-    verificationUrl: "https://example.com/cert/sql"
-  },
-  {
-    title: "Power BI Data Analyst Associate",
-    issuer: "Business Intelligence Track",
-    year: "2024",
-    skills: ["Power BI", "DAX", "Data Visualization", "Star Schema"],
-    verificationUrl: "https://example.com/cert/powerbi"
+    title: "B.Tech in Computer Science & Engineering",
+    issuer: "LBS College of Engineering (KTU)",
+    year: "2022 – 2026",
+    grade: "CGPA: 8.4 / 10",
+    status: "Official B.Tech Degree Credentials",
+    skills: ["Computer Science", "Machine Learning", "Data Structures & Algorithms", "Artificial Intelligence", "Database Systems"],
+    verificationUrl: null,
+    details: "Bachelor of Technology Degree in Computer Science & Engineering with an overall academic CGPA of 8.4 / 10."
   }
 ];

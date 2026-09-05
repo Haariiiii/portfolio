@@ -3,7 +3,7 @@
 
 export const personalInfo = {
   name: "Harigovind P",
-  title: "Data Science & AI Enthusiast",
+  title: "Data Science & Machine Learning",
   headline: "Computer Science & Engineering Graduate",
   bio: "Computer Science & Engineering graduate focused on turning data into intelligent solutions using Machine Learning, AI and modern software technologies.",
   location: "Kasargod, Kerala, India",
@@ -212,9 +212,49 @@ export const certificationsData = [
     issuer: "LBS College of Engineering (KTU)",
     year: "2022 – 2026",
     grade: "CGPA: 8.4 / 10",
-    status: "Official B.Tech Degree Credentials",
+    status: "Official Academic Degree",
     skills: ["Computer Science", "Machine Learning", "Data Structures & Algorithms", "Artificial Intelligence", "Database Systems"],
     verificationUrl: null,
     details: "Bachelor of Technology Degree in Computer Science & Engineering with an overall academic CGPA of 8.4 / 10."
+  },
+  {
+    title: "Python Django Full Stack",
+    issuer: "Linnk Academy India & ASAP (Govt. of Kerala)",
+    year: "Sept 2025 – Feb 2026",
+    grade: "Reg No: 2025/PYTH/145",
+    status: "Government Authorized Certification",
+    skills: ["Python", "Django", "MySQL", "JavaScript", "HTML5", "CSS", "Bootstrap"],
+    verificationUrl: null,
+    details: "Comprehensive full stack web development certification conducted jointly by Linnk Academy India and ASAP - Government of Kerala."
+  },
+  {
+    title: "Python for Data Science",
+    issuer: "IBM",
+    year: "April 2023",
+    grade: "IBM Professional Credential",
+    status: "Verified Professional Certification",
+    skills: ["Python", "Data Science", "Data Analysis", "Pandas", "NumPy"],
+    verificationUrl: null,
+    details: "Professional recognition for commitment to excellence and proficiency in Python programming for Data Science applications."
+  },
+  {
+    title: "Power BI Course Certification",
+    issuer: "Entri Elevate",
+    year: "July 2026",
+    grade: "ID: VWZWIRV-IHSAF",
+    status: "Verified Completion",
+    skills: ["Power BI", "DAX", "Data Analytics", "Interactive Dashboards", "Business Intelligence"],
+    verificationUrl: null,
+    details: "Certified in building enterprise Power BI reports, data modeling, DAX measures, and dynamic business dashboards."
+  },
+  {
+    title: "NPTEL Online Certification",
+    issuer: "NPTEL (IIT / Ministry of Education)",
+    year: "2024",
+    grade: "NPTEL National Certification",
+    status: "National Academic Credential",
+    skills: ["Computer Science", "Algorithms", "Data Structures", "Software Engineering"],
+    verificationUrl: null,
+    details: "National Programme on Technology Enhanced Learning (NPTEL) course certification offered by premier Indian Institutes of Technology (IITs)."
   }
 ];

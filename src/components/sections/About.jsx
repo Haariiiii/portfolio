@@ -48,7 +48,7 @@ export default function About() {
                 Computer Science & Engineering Graduate
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed font-normal">
-                I am a B.Tech Computer Science graduate from **LBS College of Engineering, Kerala**. Passionate about designing end-to-end data systems—from data extraction and exploratory analytics to training deep learning models and building real-world AI applications.
+                I am a B.Tech Computer Science graduate from LBS College of Engineering, Kerala. Passionate about designing end-to-end data systems—from data extraction and exploratory analytics to training deep learning models and building real-world AI applications.
               </p>
             </div>
 

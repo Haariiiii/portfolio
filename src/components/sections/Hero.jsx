@@ -49,7 +49,7 @@ export default function Hero() {
 
             {/* Specialty */}
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-700 mb-5 leading-snug">
-              Data Science, Machine Learning & AI Specialist
+              Data Science & Machine Learning
             </h2>
 
             {/* Bio */}
